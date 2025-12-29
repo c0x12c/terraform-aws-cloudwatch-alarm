@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.8.0]() (2025-12-29)
+
+### BREAKING CHANGES
+
+* Changed `email` variable to `emails` to support multiple email addresses for SNS topic subscriptions. This now accepts a list of strings instead of a single string.
+
+### Features
+
+* Add support for multiple email subscriptions to SNS topic.
+* Update module source reference in README to use Terraform Registry format (`c0x12c/cloudwatch-alarm/aws`).
+
 ## [0.7.0]() (2025-06-16)
 
 ### BREAKING CHANGES
