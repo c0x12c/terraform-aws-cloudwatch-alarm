@@ -50,6 +50,7 @@ https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/sns_
 */
 resource "aws_sns_topic_subscription" "target" {
   topic_arn = var.create_sns_topic ? aws_sns_topic.this[0].arn : null
+  for_each  = toset(var.emails)
   protocol  = "email"
-  endpoint  = var.email
+  endpoint  = each.value
 }

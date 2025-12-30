@@ -1,7 +1,7 @@
 module "cloudwatch_alarm" {
   source = "../../"
 
-  email       = "example-email"
+  emails      = ["example-email"]
   environment = "dev"
   alarms = {
     CPUUtilization = {
